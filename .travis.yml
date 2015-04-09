@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- iojs
+deploy:
+  provider: npm
+  email: bvdrucker@gmail.com
+  api_key:
+    secure: TJ4ZiFOBJ8lOi7SP1ZVWTXiith/cK70WLOhiVLkfi2sFY4GTupXz1MAjSWYvx6gB707aElI015DM5l4sEM2EjYd1WpM2R/iIo3dqQ9qxvMBABDI5pPr9vVbugkJ/2Ro+3ZTZuBq/uz82QO/QysrlAzLWQflX1uIc7HSbQugq8e0=
+  on:
+    tags: true
+    repo: bendrucker/angular-annotation-decorator
