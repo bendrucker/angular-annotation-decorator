@@ -3,7 +3,9 @@
 ES7 decorator for adding `$inject` annotations for Angular 1.x.
 
 ## Installing
-npm install angular-annotation-decorator
+```sh
+$ npm install angular-annotation-decorator
+```
 
 ## Usage
 
