@@ -30,5 +30,13 @@
     "babel": "~5.0.12",
     "babel-tape-runner": "~1.1.0",
     "tape": "~4.0.0"
+  },
+  "dependencies": {
+    "babelify": "~6.0.2"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   }
 }
