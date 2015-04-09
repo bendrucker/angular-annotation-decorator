@@ -1,16 +1,9 @@
 'use strict';
 
 export function annotate (...services) {
-  const [first] = services;
-  if (typeof first === 'function') {
-    services = [];
-    return decorate(first);
-  }
-  else if (Array.isArray(first)) {
-    services = first;
-  }
-  return decorate;
-  function decorate (target) {
+  return function decorate (target, key, descriptor) {
+    if (descriptor) target = descriptor.value;
     target.$inject = services;
+    return descriptor;
   }
 }

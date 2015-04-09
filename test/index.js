@@ -5,17 +5,15 @@ import {annotate} from '../';
 
 test((t) => {
 
-  @annotate
-  class Foo {}
-  t.ok(Array.isArray(Foo.$inject), 'no params');
+  @annotate('b', 'c')
+  class A {}
+  t.deepEqual(A.$inject, ['b', 'c'], 'class');
 
-  @annotate('foo', 'bar')
-  class Bar {}
-  t.deepEqual(Bar.$inject, ['foo', 'bar'], 'spread params');
-
-  @annotate(['foo', 'bar'])
-  class Baz {}
-  t.deepEqual(Baz.$inject, ['foo', 'bar'], 'array param');
+  class B {
+    @annotate('a')
+    method () {}
+  }
+  t.deepEqual(B.prototype.method.$inject, ['a'], 'method');
 
   t.end();
 
