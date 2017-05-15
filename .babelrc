@@ -1,5 +1,4 @@
 {
-  "optional": [
-    "es7.decorators"
-  ]
+  presets: ['env'],
+  plugins: ['transform-decorators-legacy']
 }

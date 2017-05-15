@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "ES7 decorator for adding $inject annotations for Angular 1.x",
   "main": "./src",
+  "files": [
+    "src/"
+  ],
   "directories": {
     "test": "test"
   },
@@ -16,9 +19,11 @@
   "keywords": [
     "angular",
     "annotate",
-    "es7",
     "babel",
-    "experimental"
+    "decorator",
+    "es7",
+    "experimental",
+    "inject"
   ],
   "author": "Ben Drucker <bvdrucker@gmail.com> (http://www.bendrucker.me/)",
   "license": "MIT",
@@ -27,16 +32,10 @@
   },
   "homepage": "https://github.com/bendrucker/angular-annotation-decorator",
   "devDependencies": {
-    "babel": "~5.0.12",
-    "babel-tape-runner": "~1.1.0",
-    "tape": "~4.0.0"
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-env": "^1.4.0",
+    "babel-tape-runner": "^2.0.1",
+    "tape": "^4.6.3"
   },
-  "dependencies": {
-    "babelify": "~6.0.2"
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
-  }
+  "dependencies": {}
 }

@@ -10,14 +10,19 @@ $ npm install angular-annotation-decorator
 ## Usage
 
 ```js
-import {annotate} from 'angular-annotation-decorator';
+import inject from 'angular-annotation-decorator';
 
-@annotate('$http', '$q')
+@inject('$http', '$q')
 class MyService {
   constructor ($http, $q) {
-    // 
+    //
+  }
+
+  @inject('$log')
+  method ($log) {
+    //
   }
 }
 ```
 
-You'll need to use an ESNext transpiler like [Babel](https://babeljs.io/) and [enable the experimental `es7.decorators` transformer](http://babeljs.io/docs/usage/experimental/).
+You'll need to use an ESNext transpiler like [Babel](https://babeljs.io/) and [enable support for decorators](https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy).
