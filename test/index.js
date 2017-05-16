@@ -1,16 +1,16 @@
 'use strict';
 
 import test from 'tape';
-import {annotate} from '../';
+import inject from '../';
 
 test((t) => {
 
-  @annotate('b', 'c')
+  @inject('b', 'c')
   class A {}
   t.deepEqual(A.$inject, ['b', 'c'], 'class');
 
   class B {
-    @annotate('a')
+    @inject('a')
     method () {}
   }
   t.deepEqual(B.prototype.method.$inject, ['a'], 'method');
