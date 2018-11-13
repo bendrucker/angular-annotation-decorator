@@ -1,4 +1,4 @@
-# angular-annotation-decorator [![Build Status](https://travis-ci.org/bendrucker/angular-annotation-decorator.svg?branch=master)](https://travis-ci.org/bendrucker/angular-annotation-decorator)
+# angular-annotation-decorator [![Build Status](https://travis-ci.org/bendrucker/angular-annotation-decorator.svg?branch=master)](https://travis-ci.org/bendrucker/angular-annotation-decorator) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/angular-annotation-decorator.svg)](https://greenkeeper.io/)
 
 ES7 decorator for adding `$inject` annotations for Angular 1.x.
 
